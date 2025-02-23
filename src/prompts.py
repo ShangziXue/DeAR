@@ -21,8 +21,8 @@ PROMPT_TEMPLATES = {
     "Update_instruction": '''The updated answer to question b is:\n''',
 }
 
-def get_prompt(template_name, **kwargs):
+def get_prompt(template_name):
     template = PROMPT_TEMPLATES.get(template_name)
     if not template:
         raise ValueError(f"Prompt template '{template_name}' not found.")
-    return template.format(**kwargs)
+    return template

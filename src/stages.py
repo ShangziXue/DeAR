@@ -17,8 +17,12 @@ def Decompose(question, heuristics):
     "The given question Q: " + question + "\n" + instruction + \
     "Please output the decomposed sub-questions as a string in list format, where each element represents the text of a sub-question, in the form of '[\"subq1\", \"subq2\", \"subq3\"]'."
     string_data = function_map[MODEL_NAME](prompt)
-    list_data = json.loads(string_data)
+    try:
+       list_data = json.loads(string_data)
+    except (json.JSONDecodeError, TypeError) as e:
+       list_data = [question]
     return list_data
+
 
 def Solve(question):
     head = get_prompt("Solve_head")
@@ -67,3 +71,4 @@ def Update(new_question, new_rationale, prev_question, prev_rationale):
     instruction = get_prompt("Update_instruction")
     prompt = head + "Question a: " + new_question + "\n" + "The answer to question a: " + new_rationale + "\n" + "Question b: " + prev_question + "\n" + "The answer to question b: " + prev_rationale + "\n" + instruction
     return function_map[MODEL_NAME](prompt)
+
