@@ -13,7 +13,7 @@ The DeAR (Decompose-Analyze-Rethink) framework is designed to improve reasoning 
 The framework’s performance has been tested on complex reasoning benchmarks like ScienceQA, StrategyQA, and GSM8K, demonstrating its superiority over other state-of-the-art methods, such as GoT and ToT, in both accuracy and efficiency.
 ![DeAR model](_static/DeAR.png)
 
-If the reader wants to know the details of LBKT, please refer to the paper: *[Decompose, Analyze and Rethink: Solving Intricate Problems with Human-like Reasoning Cycle](https://openreview.net/pdf?id=NPKZF1WDjZ)*.
+If the reader wants to know the details of DeAR, please refer to the paper: *[Decompose, Analyze and Rethink: Solving Intricate Problems with Human-like Reasoning Cycle](https://openreview.net/pdf?id=NPKZF1WDjZ)*.
 ```bibtex
 @inproceedings{NEURIPS2024_01025a4e,
  author = {Xue, Shangzi and Huang, Zhenya and Liu, Jiayu and Lin, Xin and Ning, Yuting and Jin, Binbin and Li, Xin and Liu, Qi},
